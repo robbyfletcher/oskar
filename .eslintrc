@@ -1,0 +1,10 @@
+{
+  "plugins": ["react"],
+  	parser: "babel-eslint",
+  "rules": {
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

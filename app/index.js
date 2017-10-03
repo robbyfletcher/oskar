@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 
 import Nav from './components/nav';
+import PlaidLink from './components/plaid';
 
 const nav = [
   {
@@ -15,8 +16,8 @@ const nav = [
     active: true,
   },
   {
-    text: 'About',
-    link: '/about',
+    text: 'Plaid',
+    link: '/plaid',
     active: false,
   }
 ];
@@ -44,8 +45,8 @@ class App extends React.Component {
         <div>
           <Nav navItems={nav}/>
 
-          <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
+          <Route exact path="/" component={PlaidLink}/>
+          <Route path="/plaid" component={PlaidLink}/>
         </div>
       </Router>
     )

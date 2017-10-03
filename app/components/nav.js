@@ -1,12 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,16 +21,12 @@ class Nav extends React.Component {
         </button>
         <div className="collapse navbar-collapse" id="nt">
           <ul className="navbar-nav mr-auto">
-            {this.props.navItems.map((e) => (
-              <li className={this.context.router.route.location.pathname == e.link ? 'nav-item active' : 'nav-item'}>
+            {this.props.navItems.map((e, i) => (
+              <li key={i} className={this.context.router.route.location.pathname == e.link ? 'nav-item active' : 'nav-item'}>
                 <Link to={e.link} className="nav-link">{e.text}</Link>
               </li>
             ))}
           </ul>
-
-          <form className="form-inline">
-            <button className="btn btn-outline-light" type="button">Log in</button>
-          </form>
         </div>
       </nav>
     )
@@ -41,7 +34,7 @@ class Nav extends React.Component {
 }
 
 Nav.contextTypes = {
-    router: React.PropTypes.func.isRequired
+    router: PropTypes.object.isRequired
 };
 
 export default Nav;

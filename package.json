@@ -11,6 +11,12 @@
     "compile": "webpack --progress --colors"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "envvar": "^2.0.0",
+    "express": "^4.16.1",
+    "moment": "^2.18.1",
+    "plaid": "^2.0.5",
+    "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.2.2"
